@@ -11,7 +11,7 @@ export const Navbar = () => {
           </span>
         </div>
         <NavbarLinks />
-        <Button className="">Commencer</Button>
+        <Button className="hidden md:flex">Commencer</Button>
       </div>
     </nav>
   );
