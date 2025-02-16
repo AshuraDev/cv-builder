@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -58,7 +58,7 @@ export const NavbarLinks = () => {
       <div
         className={cn(
           "md:hidden absolute bg-background inset-0 top-20 h-0 transition-all overflow-hidden w-full",
-          isMenuOpen && "h-56"
+          isMenuOpen && "h-56 border border-input shadow-md z-50"
         )}
       >
         <div className="flex flex-col gap-y-4 items-center justify-between h-full p-4 ">
@@ -67,14 +67,16 @@ export const NavbarLinks = () => {
               key={link.href}
               href={link.href}
               className={cn(
-                "border border-input w-full flex items-center justify-center py-2 font-semibold text-lg hover:bg-muted",
+                "w-full flex items-center justify-center py-2 font-semibold text-lg hover:bg-muted",
                 link.active && "text-primary"
               )}
             >
               {link.label}
             </Link>
           ))}
-          <Button>Commencer</Button>
+          <Button className="flex items-center justify-center gap-x-2">
+            Commencer <ArrowRight className="h-6 w-6" />
+          </Button>
         </div>
       </div>
     </>
