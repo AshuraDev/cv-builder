@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-*,
-html,
-body,
-:root {
+
+body {
   padding: 0;
   margin: 0;
-  /* background-color: #ffff; */
+  color: var(--foreground);
+  background-color: var(--background);
 }
 
 
